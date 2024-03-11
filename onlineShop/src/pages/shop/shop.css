@@ -1,0 +1,31 @@
+.pageBoard{
+    width: 100%;
+    background: #f5f5f5;
+    padding: 30px 0;
+    margin: 30px 0;
+}
+.boardContent{
+    display: flex;
+    flex-direction: column;
+    padding-left: 130px;
+    /* align-items: center;
+    justify-content: center; */
+}
+.pageTitle{
+    font-size: 36px;
+    font-weight: 200;
+    color: #333;
+    font-family: "Poppins";
+    padding-bottom: 15px;
+}
+.pageLink{
+    text-decoration: none;
+    color: #000;
+}
+.pageLinkItem{
+    font-weight: 200;
+    font-size: 12px;
+}
+.trendyProducts.shop-background {
+    background-color: #f5f5f5; /* Background color when location is "/shop" */
+}

@@ -1,0 +1,428 @@
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1320px;
+}
+
+.navbarPhone {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.navbarLogo {
+  display: flex;
+  align-items: center;
+  animation: logoPulse 6s ease-in-out infinite alternate;
+}
+
+@keyframes logoPulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.phone-icon {
+  display: inline-block;
+  transform: scaleX(-1); /* Flips the icon horizontally */
+}
+
+.navbarHero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 35px;
+}
+.navbarItems {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  cursor: pointer;
+}
+
+.shopping {
+  display: flex;
+  align-items: center;
+}
+.searchBar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.searchBarHover {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0px);
+   left: calc(20% - 90px);
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  padding: 15px;
+  animation: slideIn 0.5s forwards;
+}
+
+.searchBar:hover .searchBarHover {
+  display: block;
+  animation: slideOut 0.5s forwards;
+}
+@keyframes slideIn {
+    from {
+      top: 100%; /* Start from below */
+    }
+    to {
+      top: calc(100% + 10px); /* Move to the upper position */
+    }
+  }
+  .searchBar:hover:not(:focus-within) .searchBarHover {
+    animation: slideOut 0.5s forwards; /* Animation for disappearing */
+  }
+  @keyframes slideOut {
+    from {
+      top: calc(100% + 10px); /* Start from the upper position */
+    }
+    to {
+      top: 100%; /* Move back below */
+    }
+  }
+
+.searchInput {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  width: 200px;
+}
+.searchInput:focus {
+  border-color: #000; /* Change border color when input is focused */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add box shadow when input is focused */
+}
+
+.languageList {
+  display: flex;
+  align-items: center;
+}
+
+/**************  Navbar List Menu *******************************************************************************/
+
+
+.navbarList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  cursor: pointer;
+  list-style: none;
+}
+.navbarListItem{
+    display: flex;
+    align-items: center;
+    
+}
+.dropDown {
+    position: relative;
+}
+
+.mainBox {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: calc(20% - 90px);
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 15px;
+    gap: 30px;
+}
+
+.dropDown:hover .mainBox {
+    display: flex;
+    animation: moveUp 1s forwards;
+}
+
+.mainBox:hover {
+    display: none;
+    animation: moveDown 1s forwards;
+}
+
+@keyframes moveUp {
+    from {
+      transform: translateY(100%);/* Start from below */
+    }
+    to {
+      transform: translateY(10px); /* Move to the upper position */
+    }
+}
+
+@keyframes moveDown {
+    from {
+      transform: translateY(-100%); /* Start from the upper position */
+      
+    }
+    to {
+      transform: translateY(0); /* Move back below */
+      
+    }
+}
+
+
+  
+  .dropDownPages, .dropDownLayouts {
+    margin-bottom: 20px;
+  }
+  
+  .dropDownTitle {
+    font-weight: bold;
+  }
+.dropDownTitle{
+    color: grey;
+    border-bottom:1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+.pagesList, .layoutList{
+    list-style: none;
+}
+
+
+.dropDownToggle{
+    display: flex;
+    align-items: center;
+}
+.pagesItem, .layoutItem{
+    padding: 10px;
+}
+
+.link{
+    text-decoration: none;
+
+}
+.linkItem{
+    color:black;
+    opacity: 0.7;
+    padding-right: 55px;
+    
+    
+}
+.linkItem:hover{
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+
+/*****************************PAGES CSS CODE*******************************/
+.pagesDropDown{
+    position: relative;
+} 
+
+.pagesMainBox{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: -1000%;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 15px;
+    gap: 30px;
+    
+}
+
+.pagesDropDown:hover .pagesMainBox{
+    display: flex;
+    animation: moveUp 1s forwards;
+}
+.pagesMainBox:hover {
+    display: none;
+    animation: moveDown 1s ease forwards;
+    
+}
+@keyframes moveUp {
+    from {
+      transform: translateY(100%);/* Start from below */
+    }
+    to {
+      transform: translateY(10px); /* Move to the upper position */
+    }
+}
+
+@keyframes moveDown {
+    from {
+      transform: translateY(-100%); /* Start from the upper position */
+      
+    }
+    to {
+      transform: translateY(0); /* Move back below */
+      
+    }
+}
+
+.introTitle{
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: grey;
+}
+.mainPagesList, .dashList, .utList{
+    list-style: none;
+    
+}
+.linkPagesItem{
+    color: #000;
+    opacity: 0.7;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-style: sans-serif;
+    width: 230px;
+    
+}
+.linkPagesItem:hover{
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+    
+}
+.linkDashItem{
+    color: #000;
+    opacity: 0.7;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-style: sans-serif;
+    width: 230px;
+}
+.linkDashItem:hover{
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+}
+.linkUtItem{
+    color: #000;
+    opacity: 0.7;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-style: sans-serif;
+    width: 230px;
+}
+.linkUtItem:hover{
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+/*****************************PAGES CSS CODE*******************************/
+
+/*****************************BLOGS CSS CODE*******************************/
+
+.blogTypeList{
+    list-style: none;
+}
+.blogDropDown{
+    position: relative;
+}
+.blogMainPage{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 50px);
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 15px;
+    /* gap: 30px; */
+
+}
+.blogDropDown:hover .blogMainPage{
+    display: flex;
+    animation: moveUp 1s forwards;
+}
+.blogMainPage:hover {
+    display: none;
+    animation: moveDown 1s ease forwards;
+    
+}
+@keyframes moveUp {
+    from {
+      transform: translateY(100%);/* Start from below */
+    }
+    to {
+      transform: translateY(10px); /* Move to the upper position */
+    }
+}
+
+@keyframes moveDown {
+    from {
+      transform: translateY(-100%); /* Start from the upper position */
+      
+    }
+    to {
+      transform: translateY(0); /* Move back below */
+      
+    }
+}
+.linkBlogItem{
+    color: #000;
+    opacity: 0.7;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-style: sans-serif;
+    font-size: 12px;
+    width: 190px;
+}
+.linkBlogItem:hover{
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+}
+/*****************************BLOGS CSS CODE*******************************/
+
+/*****************************CONTACT CSS CODE*******************************/
+.elementList{
+    list-style: none;
+}
+.elementDropDown{
+    position: relative;
+}
+.linkElementItem{
+    color: #000;
+    opacity: 0.7;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-style: sans-serif;
+    font-size: 12px;
+    width: 190px;
+}
+.linkElementItem:hover{
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+}
+.elementsMainBox{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 50px);
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 15px;
+}
+.dropDown:hover .elementsMainBox{
+    display: flex;
+    animation: moveUp 1s forwards;
+}
+.elementsMainBox:hover {
+    display: none;
+    animation: moveDown 1s ease forwards;
+    
+}

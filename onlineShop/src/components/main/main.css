@@ -1,0 +1,244 @@
+.mainBoxes{
+    display: grid;
+    gap: 20px;
+    padding: 80px;
+   
+
+}
+.mainTitle{
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+   padding-top: 40px;
+    color: #333;
+    font-weight: 500;
+}
+.textContent{
+    padding: 25px;
+}
+.textContentTitle{
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.textContentText{
+    font-family: "Poppins", sans-serif;
+    color: #757575;
+    font-size: 15px;
+}
+
+
+
+.clothesSales{
+    background-image: url(../../assets/images/category/category1.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 80vh;
+    grid-column: 1;
+    grid-row: 1;
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+}
+
+.smartCasuals{
+    background-image: url(../../assets/images/category/category2.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 76vh;
+    grid-column: 1;
+    grid-row: 2;
+    transition: transform 0.3s ease;
+    
+}
+.jewelry{
+    background-image: url(../../assets/images/category/category3.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 199%;
+    grid-column: 2 span 2;
+    grid-row: 1 ;
+    transition: transform 0.3s ease;
+    
+}
+.clothesSales:hover,
+.smartCasuals:hover,
+.jewelry:hover {
+    transform: scale(1.05);
+}
+
+.trendyProducts{
+    background-color: #f9f9f9f9;
+    padding: 80px;
+}
+.trendyProductsBoxes{
+    display: grid;
+    gap: 20px;
+    padding: 80px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    cursor: pointer;
+}
+.trendyProductsBox {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.trendyProductsBox:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+.trendyContentBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.bottomIcons{
+    display: flex;
+    gap: 20px;
+}
+.bottomIcons {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    animation: slideIn 0.5s ease forwards;
+    transition: opacity 1s ease;
+}
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.show {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.bottomIcons > div {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.trendyProductsBox:hover .bottomIcons > div {
+    opacity: 1;
+}
+.search{
+    background-color: aliceblue;
+    padding: 15px;
+}
+.search:hover{
+    background-color: #000;
+    color: aliceblue;
+}
+.favorites{
+    background-color: aliceblue;
+    padding: 15px;
+}
+.favorites:hover{
+    background-color: #000;
+    color: aliceblue;
+}
+.cart{
+    background-color: aliceblue;
+    padding: 15px;
+}
+.cart:hover{
+    background-color: #000;
+    color: aliceblue;
+}
+.costs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.productTitle{
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+.productPrice{
+    font-family: "Poppins", sans-serif;
+    color: #757575;
+    font-size: 15px;
+}
+
+.subscribeBox{
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
+    color: #757575;
+    font-size: 15px;
+}
+.subscribeText{
+    font-family: "Poppins", sans-serif;
+    color: #757575;
+    font-size: 15px;
+    max-width: 650px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.email{
+    padding: 10px 30px;
+    width: 220px;
+    border: 1px solid grey;
+    outline-offset: 1px;
+    
+}
+.emailForm{
+    padding-bottom: 30px;
+}
+.subscribe{
+    padding: 9px 35px;
+    background-color: #000;
+    color: aliceblue;
+}
+.instagram{
+    padding: 80px ;
+}
+.instagramTitle{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    line-height: 1.1;
+    color: #333;
+    font-weight: 400;
+    letter-spacing: 2px;
+}

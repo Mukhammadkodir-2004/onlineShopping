@@ -1,0 +1,277 @@
+.heroBanner {
+    position: relative;
+    margin-top: 30px;
+    background-image: url(../../assets/images/slider1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 620px;
+    margin-bottom: 50px;
+    transition: background-image 0.2s ease-in-out;
+  }
+  
+  .heroBanner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity (last value) as needed */
+    z-index: 1; 
+    transition: background-image 0.5s ease-in-out;/* Place the overlay on top of the background image */
+  }
+  .heroBanner2 {
+    position: relative;
+    margin-top: 30px;
+    background-image: url(../../assets/images/slider2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 620px;
+    margin-bottom: 50px;
+    transition: background-image 0.5s ease-in-out;
+  }
+  .heroBanner2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity (last value) as needed */
+    z-index: 1;
+    transition: background-image 0.5s ease-in-out; /* Place the overlay on top of the background image */
+  }
+  .heroBanner3 {
+    position: relative;
+    margin-top: 30px;
+    background-image: url(../../assets/images/slider3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 620px;
+    margin-bottom: 50px;
+    transition: background-image 0.5s ease-in-out;
+  }
+  .heroBanner3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity (last value) as needed */
+    z-index: 1;
+    transition: background-image 0.5s ease-in-out; /* Place the overlay on top of the background image */
+  }
+  /* Header.css */
+.prevButton,
+.nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  z-index: 2;
+   
+}
+
+.prevButton {
+  left: 20px;
+
+}
+
+.nextButton {
+  right: 20px;
+
+}
+
+.leftBtn{
+   background-color: aliceblue;
+   border-radius: 50%;
+   color: grey;
+   width: 60px;
+   height: 60px;
+   padding: 20px;
+}
+.leftBtn:hover{
+    background-color:#000;
+    color: #fff;
+}
+.rightBtn{
+    background-color: aliceblue;
+    border-radius: 50%;
+    color: grey;
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+}
+.rightBtn:hover{
+    background-color:#000;
+    color: #fff;
+}
+.dotIndicators {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+    
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #000; /* Change color for active dot */
+}
+
+.contentBox {
+    z-index: 2;
+    position: absolute;
+    top: 30%;
+    left: 50%; /* Centering contentBox horizontally */
+    transform: translate(-50%, -50%); /* Centering contentBox vertically */
+    padding: 20px;
+    text-align: center;
+    color: white;
+    transition: left 0.5s, right 0.5s;
+    
+  }
+  
+  .slide-middle {
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centering contentBox horizontally */
+  }
+  
+  .slide-left {
+    left: 35%;
+    top: 50%;
+    text-align: left;
+    
+  }
+  .slide-right {
+   right: 0;
+   top: 30%;
+    text-align: right;
+   transform: translateX(-5%);
+   width: 420px;
+  }
+
+.contentTitle {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    color: white;
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-duration: 0.3s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+.contentText{
+    white-space: normal;
+    font-size: 49px;
+    line-height: 49px;
+    font-weight: 400;
+    color: white;
+    letter-spacing: -2px;
+    font-family: "Playfair Display";
+    margin-bottom: 35px;
+    max-width: 400px;
+    /* text-align: center; */
+}
+.contentText {
+    color: white;
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-duration: 0.3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+
+.contentBtn{
+    width: 120px;
+    background-color: transparent;
+    border: none;
+}
+.contentBtn {
+    color: white;
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-duration: 0.3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+.linkItems{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 1px;
+    font-family: "Roboto Condensed";
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    outline: none;
+    box-sizing: border-box;
+    padding: 12px 26px;
+    
+}
+
+
+
+
