@@ -1,0 +1,20 @@
+# Redirects
+[[redirects]]
+  from = "/old-page"
+  to = "/new-page"
+  status = 301
+
+# Headers
+[[headers]]
+  # Define headers for all paths
+  for = "/*"
+    [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+
+# Proxy
+[[redirects]]
+  from = "/api/*"
+  to = "https://example-api.com/:splat"
+  status = 200
+  force = true
